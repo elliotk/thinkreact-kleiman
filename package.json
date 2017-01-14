@@ -4,6 +4,7 @@
   "description": "ThinkReactJS workshop",
   "main": "server.js",
   "scripts": {
+    "start":"gulp && node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,22 @@
   "bugs": {
     "url": "https://github.com/elliotk/thinkreact-kleiman/issues"
   },
-  "homepage": "https://github.com/elliotk/thinkreact-kleiman#readme"
+  "homepage": "https://github.com/elliotk/thinkreact-kleiman#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.3.0",
+    "gulp": "^3.9.1",
+    "gulp-react": "^3.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
 }
