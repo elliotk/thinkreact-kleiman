@@ -3,11 +3,17 @@ var logs = require('../utilities/logsMixin.js')
 const Row = require('react-bootstrap/lib/Row');
 const Col = require('react-bootstrap/lib/Col');
 
-var bulletsArray = ["One for the array", "Two for the array", "Three for the array", "Four tie boh"]
+var photosArray = ["./img/photo1.jpg", "./img/photo2.jpg", "./img/photo3.jpg", "./img/photo4.jpg"]
 
-const Bullets = React.createClass({
+const imageStyle = {
+  width: '100%',
+  height: "auto",
+  marginTop: '30px'
+}
 
- name:"Bullets",
+const Photos = React.createClass({
+
+ name:"Photos",
  mixins: [logs], //don't forget the comma
  propTypes: {
    children:React.PropTypes.node
@@ -21,22 +27,25 @@ const Bullets = React.createClass({
 
   render: function() {
 
-    var bull;
-    if (bulletsArray.length > 0) {
-      bull = bulletsArray.map(function(value, index) {
+    var photo;
+    if (photosArray.length > 0) {
+      photo = photosArray.map(function(value, index) {
         return (
-          <Row key={index}><Col xs={12}>~ {value}</Col></Row>
+          <Col key={index} xs={6}><img style = {imageStyle} src={value} /></Col>
         )
       })
     }
 
     return (
-      <div>{bull}</div>
+      <Row>{photo}</Row>
     )
+
+
+
   },
   //componentDidUpdate: function(){},
   //componentWillUnmount: function(){}
 
 });
 
-module.exports = Bullets
+module.exports = Photos
