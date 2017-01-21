@@ -1,13 +1,13 @@
 const React = require('react');
-var logs = require('../utilities/logMixin.js')
-const <NAME> = React.createClass({
+var logs = require('../utilities/logsMixin.js')
+const Section = React.createClass({
 
- name:"<NAME>",
+ name:"Section",
  mixins: [logs], //don't forget the comma
  propTypes: {
+   section: React.PropTypes.string,
    children:React.PropTypes.node
  },
-
   //-----default API-----
   //componentWillMount: function(){},
   //componentDidMount: function(){},
@@ -16,7 +16,10 @@ const <NAME> = React.createClass({
 
   render: function() {
     return (
-      <div>TEMPLATE</div>
+      <div>
+        {this.props.section}
+        {this.props.children}
+      </div>
     )
   },
   //componentDidUpdate: function(){},
@@ -24,4 +27,4 @@ const <NAME> = React.createClass({
 
 });
 
-module.exports = <NAME>
+module.exports = Section

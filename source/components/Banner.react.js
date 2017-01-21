@@ -1,10 +1,11 @@
 const React = require('react');
-var logs = require('../utilities/logMixin.js')
-const <NAME> = React.createClass({
+var logs = require('../utilities/logsMixin.js')
+const Banner = React.createClass({
 
- name:"<NAME>",
+ name:"Banner",
  mixins: [logs], //don't forget the comma
  propTypes: {
+   title: React.PropTypes.string,
    children:React.PropTypes.node
  },
 
@@ -16,7 +17,10 @@ const <NAME> = React.createClass({
 
   render: function() {
     return (
-      <div>TEMPLATE</div>
+      <div>
+        {this.props.title}
+        {this.props.children}
+      </div>
     )
   },
   //componentDidUpdate: function(){},
@@ -24,4 +28,4 @@ const <NAME> = React.createClass({
 
 });
 
-module.exports = <NAME>
+module.exports = Banner

@@ -4,7 +4,8 @@
   "description": "ThinkReactJS workshop",
   "main": "server.js",
   "scripts": {
-    "start":"gulp && node server",
+    "start": "forever start server.js",
+    "stop": "forever stop server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,11 @@
   },
   "homepage": "https://github.com/elliotk/thinkreact-kleiman#readme",
   "dependencies": {
+    "bootcamp": "^1.1.7",
+    "bootstrap": "^3.3.7",
     "express": "^4.14.0",
+    "forever": "^0.15.3",
+    "forever-monitor": "^1.7.1",
     "fs": "0.0.1-security",
     "path": "^0.12.7",
     "react": "^15.4.2",
