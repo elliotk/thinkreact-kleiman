@@ -1,5 +1,5 @@
 const React = require('react');
-var logs = require('../utilities/logMixin.js')
+var logs = require('../utilities/logsMixin.js')
 const <NAME> = React.createClass({
 
  name:"<NAME>",

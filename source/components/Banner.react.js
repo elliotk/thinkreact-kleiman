@@ -1,5 +1,17 @@
 const React = require('react');
-var logs = require('../utilities/logsMixin.js')
+var logs = require('../utilities/logsMixin.js');
+const Row = require('react-bootstrap/lib/Row');
+const Col = require('react-bootstrap/lib/Col');
+
+const bannerStyle = {
+  backgroundColor: "#333"
+}
+
+const imageStyle = {
+  width: '100%',
+  height: "auto"
+}
+
 const Banner = React.createClass({
 
  name:"Banner",
@@ -17,10 +29,11 @@ const Banner = React.createClass({
 
   render: function() {
     return (
-      <div>
-        {this.props.title}
-        {this.props.children}
-      </div>
+
+        <Row style = {bannerStyle}>
+          <img style = {imageStyle} src='./img/banner.jpg' />
+        </Row>
+
     )
   },
   //componentDidUpdate: function(){},
