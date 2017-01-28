@@ -8,7 +8,7 @@ var bulletsArray = ["One for the array", "Two for the array", "Three for the arr
 const Bullets = React.createClass({
 
  name:"Bullets",
- mixins: [logs], //don't forget the comma
+ //mixins: [logs], //don't forget the comma
  propTypes: {
    children:React.PropTypes.node
  },

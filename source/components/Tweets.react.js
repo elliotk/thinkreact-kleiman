@@ -1,16 +1,13 @@
 const React = require('react');
-var logs = require('../utilities/logsMixin.js')
 const Row = require('react-bootstrap/lib/Row');
 const Col = require('react-bootstrap/lib/Col');
+import textBlock from './textBlock.react.js';
 
-const headerStyle = {
-  color: "blue"
-}
+var logs = require('../utilities/logsMixin.js');
+const Tweets = React.createClass({
 
-const Header = React.createClass({
-
- name:"Header",
- //mixins: [logs], //don't forget the comma
+ name:"Tweets",
+ mixins: [logs], //don't forget the comma
  propTypes: {
    children:React.PropTypes.node
  },
@@ -23,7 +20,11 @@ const Header = React.createClass({
 
   render: function() {
     return (
-      <h2 style = {headerStyle}>{this.props.children}</h2>
+      <div>
+
+      {textBlock("today", "some text", "@elliotk")}
+
+      </div>
     )
   },
   //componentDidUpdate: function(){},
@@ -31,4 +32,4 @@ const Header = React.createClass({
 
 });
 
-module.exports = Header
+module.exports = Tweets

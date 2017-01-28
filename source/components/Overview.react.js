@@ -10,7 +10,7 @@ const text = "Lorem Ipsum is simply dummy text of the printing and typesetting i
 const Overview = React.createClass({
 
  name:"Overview",
- mixins: [logs], //don't forget the comma
+ //mixins: [logs], //don't forget the comma
  propTypes: {
    children:React.PropTypes.node
  },

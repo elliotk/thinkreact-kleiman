@@ -14,7 +14,7 @@ const imageStyle = {
 const Photos = React.createClass({
 
  name:"Photos",
- mixins: [logs], //don't forget the comma
+ //mixins: [logs], //don't forget the comma
  propTypes: {
    children:React.PropTypes.node
  },
